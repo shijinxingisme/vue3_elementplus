@@ -1,0 +1,7 @@
+export const getAdminListBySearchAndPage = '/getAdminListBySearchAndPage'
+export const getAdminListBySearchCount = '/getAdminListBySearchCount'
+export const delAdminById = '/delAdminById'
+export const getAdminInfoById = '/getAdminInfoById'
+export const updateAdminInfoById = '/updateAdminInfoById'
+export const addAdmin = '/addAdmin'
+export const admin_login = '/admin_login'
