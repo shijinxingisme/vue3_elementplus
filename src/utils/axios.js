@@ -1,6 +1,7 @@
 import axios from 'axios'
 import store from './../store'
-const ConfigBaseURL = 'http://localhost:9999';
+// const ConfigBaseURL = 'http://localhost:9999';
+const ConfigBaseURL = '/api';
 
 
 // 让ajax携带cookie(自动携带本地所有cookie)s

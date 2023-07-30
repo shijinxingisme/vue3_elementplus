@@ -55,10 +55,10 @@ function add_admin({user, pwd, rePwd, name, type}) {
 }
 
 //管理员登录
-function admin_login(user, pwd) {
+function admin_login(userName, passWord) {
     return axios({
         url: api.admin.admin_login, method: "post", data: {
-            user, pwd
+            userName, passWord
         }
     })
 }

@@ -1,10 +1,10 @@
 <template>
   <el-form :model="form" label-width="120px">
     <el-form-item label="用户名">
-      <el-input v-model="user"/>
+      <el-input v-model="userName"/>
     </el-form-item>
     <el-form-item label="密码">
-      <el-input v-model="pwd" type="password"/>
+      <el-input v-model="passWord" type="password"/>
     </el-form-item>
     <el-form-item label="身份">
       <el-radio-group v-model="role">
@@ -26,8 +26,8 @@ import {reactive, toRefs} from 'vue'
 import adminManage from './../hooks/admin.js'
 
 const form = reactive({
-  user: '',
-  pwd: '',
+  userName: '',
+  passWord: '',
   role: '',
 })
 
@@ -35,14 +35,14 @@ const form = reactive({
 const {Admin_Login} = adminManage()
 
 //转对象  查看值需要value
-const {user, pwd, role} = toRefs(form)
+const {userName, passWord, role} = toRefs(form)
 const onSubmit = () => {
-  console.log(user.value)
-  console.log(pwd.value)
-  console.log(role.value)
+  // console.log(userName.value)
+  // console.log(passWord.value)
+  // console.log(role.value)
   //发起请求
   //hooks文件夹： 业务内容提供独立出来
-  Admin_Login(user,pwd)
+  Admin_Login(userName.value,passWord.value)
 }
 
 </script>
